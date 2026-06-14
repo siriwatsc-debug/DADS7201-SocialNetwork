@@ -66,11 +66,17 @@ def get_stock_info(symbol):
         return None
 
 
-col1, col2 = st.columns([1, 3])
+col1, col2, col3 = st.columns([1, 3, 1])
 
 with col1:
     st.subheader("Select Stock")
     selected = st.selectbox("SET50 Symbol", SET50_SYMBOLS, label_visibility="collapsed")
+
+with col3:
+    st.subheader("")
+    if st.button("Refresh"):
+        st.cache_data.clear()
+        st.rerun()
 
 with col2:
     st.subheader("")
@@ -96,23 +102,23 @@ if info:
 st.divider()
 
 if sh_data and sh_data.get("majorShareholders"):
-    holders = sh_data["majorShareholders"][:5]
+    all_holders = sh_data["majorShareholders"]
+    top5 = sorted(all_holders, key=lambda h: h["percentOfShare"], reverse=True)[:5]
     df = pd.DataFrame([
         {
-            "Rank": h["sequence"],
+            "Rank": i + 1,
             "Shareholder": h["name"],
-            "Shares": h["numberOfShare"],
+            "Shares": f"{h['numberOfShare']:,.0f}",
             "% Ownership": h["percentOfShare"],
             "Thai NVDR": "Yes" if h.get("isThaiNVDR") else "No",
         }
-        for h in holders
+        for i, h in enumerate(top5)
     ])
-    df["Shares"] = df["Shares"].apply(lambda x: f"{x:,.0f}")
 
     c1, c2 = st.columns([2, 3])
 
     with c1:
-        st.subheader(f"Top 5 Shareholders")
+        st.subheader("Top 5 Shareholders")
         st.dataframe(df, hide_index=True, use_container_width=True)
 
         total_sh = sh_data.get("totalShareholder", 0)
@@ -125,16 +131,16 @@ if sh_data and sh_data.get("majorShareholders"):
     with c2:
         fig = go.Figure(data=[
             go.Bar(
-                y=[f"#{h['sequence']}" for h in holders],
-                x=[h["percentOfShare"] for h in holders],
-                text=[f"{h['percentOfShare']:.2f}%" for h in holders],
+                y=[h["name"][:30] for h in top5],
+                x=[h["percentOfShare"] for h in top5],
+                text=[f"{h['percentOfShare']:.2f}%" for h in top5],
                 textposition="outside",
                 orientation="h",
                 marker_color=["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"],
             )
         ])
         fig.update_layout(
-            title="Ownership %",
+            title="Ownership % (Descending)",
             xaxis_title="% of Shares",
             yaxis_title="",
             height=300,
