@@ -10,12 +10,13 @@ st.set_page_config(page_title="SET50 Top 5 Shareholders", layout="wide")
 st.title("SET50 Top 5 Shareholders")
 
 SET50_SYMBOLS = [
-    "ADVANC", "AOT", "AWC", "BAM", "BANPU", "BBL", "BCH", "BDMS",
-    "BEM", "BGRIM", "BH", "BJC", "BLA", "BTS", "CPALL", "CPF", "CPN",
-    "CRC", "DELTA", "EA", "EGCO", "GLOBAL", "GPSC", "GULF", "HMPRO",
-    "INTUCH", "IRPC", "IVL", "KBANK", "KCE", "KTB", "KTC", "LH",
-    "MINT", "MTC", "OR", "OSP", "PLANB", "PTT", "PTTEP", "PTTGC",
-    "SAWAD", "SCB", "SCC", "TISCO", "TOP", "TRUE", "TU", "WHA",
+    "ADVANC", "AOT", "AWC", "BANPU", "BBL", "BDMS", "BEM", "BH",
+    "BJC", "BTS", "CBG", "CCET", "CENTEL", "COM7", "CPALL", "CPF",
+    "CPN", "CRC", "DELTA", "EGCO", "GPSC", "GULF", "HMPRO", "IVL",
+    "KBANK", "KKP", "KTB", "KTC", "LH", "MINT", "MTC", "OR", "OSP",
+    "PTT", "PTTEP", "PTTGC", "RATCH", "SAWAD", "SCB", "SCC", "SCGP",
+    "TCAP", "TIDLOR", "TISCO", "TLI", "TOP", "TRUE", "TTB", "TU",
+    "WHA",
 ]
 
 SET50_SYMBOLS.sort()
