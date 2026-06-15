@@ -1,2 +1,2 @@
-# DAD7201
+# DAD7201 Social Network Analysis
 
