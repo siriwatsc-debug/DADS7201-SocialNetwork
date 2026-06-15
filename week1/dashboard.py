@@ -218,7 +218,10 @@ if st.button("Build Network Graph", type="primary"):
         st.warning("No data available to build the network.")
     else:
         st.success(f"Fetched data for {success_count}/{len(SET50_SYMBOLS)} stocks — {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
-        pos = nx.kamada_kawai_layout(G, scale=2)
+        try:
+            pos = nx.kamada_kawai_layout(G, scale=2)
+        except Exception:
+            pos = nx.spring_layout(G, k=0.5, iterations=50, seed=42)
 
         node_degrees = dict(G.degree())
         stock_nodes = [n for n in G.nodes() if n in SET50_SYMBOLS]
