@@ -1,0 +1,6 @@
+cloudscraper
+networkx
+pandas
+plotly
+streamlit
+yfinance
