@@ -10,12 +10,13 @@ st.set_page_config(page_title="SET50 Top 5 Shareholders", layout="wide")
 st.title("SET50 Top 5 Shareholders")
 
 SET50_SYMBOLS = [
-    "ADVANC", "AOT", "AWC", "BAM", "BANPU", "BBL", "BCH", "BDMS",
-    "BEM", "BGRIM", "BH", "BJC", "BLA", "BTS", "CPALL", "CPF", "CPN",
-    "CRC", "DELTA", "EA", "EGCO", "GLOBAL", "GPSC", "GULF", "HMPRO",
-    "INTUCH", "IRPC", "IVL", "KBANK", "KCE", "KTB", "KTC", "LH",
-    "MINT", "MTC", "OR", "OSP", "PLANB", "PTT", "PTTEP", "PTTGC",
-    "SAWAD", "SCB", "SCC", "TISCO", "TOP", "TRUE", "TU", "WHA",
+    "ADVANC", "AOT", "AWC", "BANPU", "BBL", "BDMS", "BEM", "BH",
+    "BJC", "BTS", "CBG", "CCET", "CENTEL", "COM7", "CPALL", "CPF",
+    "CPN", "CRC", "DELTA", "EGCO", "GPSC", "GULF", "HMPRO", "IVL",
+    "KBANK", "KKP", "KTB", "KTC", "LH", "MINT", "MTC", "OR", "OSP",
+    "PTT", "PTTEP", "PTTGC", "RATCH", "SAWAD", "SCB", "SCC", "SCGP",
+    "TCAP", "TIDLOR", "TISCO", "TLI", "TOP", "TRUE", "TTB", "TU",
+    "WHA",
 ]
 
 SET50_SYMBOLS.sort()
@@ -312,3 +313,38 @@ if st.button("Build Network Graph", type="primary"):
             for i, n in enumerate(top_holders)
         ])
         st.dataframe(holders_df, hide_index=True, use_container_width=True)
+
+        st.divider()
+        st.subheader("Network Centrality Metrics")
+
+        all_nodes_sorted = sorted(G.nodes())
+        deg_cent = nx.degree_centrality(G)
+        close_cent = nx.closeness_centrality(G)
+        between_cent = nx.betweenness_centrality(G)
+        try:
+            eigen_cent = nx.eigenvector_centrality(G, max_iter=1000)
+        except Exception:
+            eigen_cent = {n: None for n in G.nodes()}
+        try:
+            katz_cent = nx.katz_centrality(G, max_iter=1000)
+        except Exception:
+            katz_cent = {n: None for n in G.nodes()}
+        try:
+            pagerank = nx.pagerank(G)
+        except Exception:
+            pagerank = {n: None for n in G.nodes()}
+
+        cent_df = pd.DataFrame([
+            {
+                "Node": n,
+                "Type": "Stock" if n in SET50_SYMBOLS else "Shareholder",
+                "Degree Centrality": round(deg_cent.get(n, 0), 4),
+                "Closeness": round(close_cent.get(n, 0), 4),
+                "Betweenness": round(between_cent.get(n, 0), 4),
+                "Eigenvector": round(eigen_cent.get(n, 0), 4) if eigen_cent.get(n) else None,
+                "Katz": round(katz_cent.get(n, 0), 4) if katz_cent.get(n) else None,
+                "PageRank": round(pagerank.get(n, 0), 4) if pagerank.get(n) else None,
+            }
+            for n in all_nodes_sorted
+        ])
+        st.dataframe(cent_df, hide_index=True, use_container_width=True)
