@@ -1,0 +1,4 @@
+investmentId,companyId,amountUSD,year,status,project
+INV001,COMP001,1000000000,2026,Approved,Google Cloud Thailand
+INV002,COMP002,1000000000,2026,Approved,Microsoft AI Infrastructure
+INV003,COMP003,25000000000,2026,Approved,TikTok Data Center

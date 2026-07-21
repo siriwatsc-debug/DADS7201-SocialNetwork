@@ -1,0 +1,4 @@
+companyId,name,country,type,focus
+COMP001,Google,USA,Hyperscaler,Cloud
+COMP002,Microsoft,USA,Hyperscaler,Cloud/AI
+COMP003,TikTok,China,Internet,Content

@@ -1,0 +1,5 @@
+infrastructureId,name,category
+INF001,National Grid,Power
+INF002,Fiber Optic Backbone,Telecom
+INF003,Submarine Cable,Network
+INF004,EEC Industrial Estate,Industrial Estate
