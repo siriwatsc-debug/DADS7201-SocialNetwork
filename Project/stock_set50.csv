@@ -1,51 +1,51 @@
-ticker,name,index
-ADVANC,ADVANC,SET50
-AOT,AOT,SET50
-AWC,AWC,SET50
-BANPU,BANPU,SET50
-BBL,BBL,SET50
-BCP,BCP,SET50
-BDMS,BDMS,SET50
-BEM,BEM,SET50
-BGRIM,BGRIM,SET50
-BH,BH,SET50
-BJC,BJC,SET50
-BLA,BLA,SET50
-CBG,CBG,SET50
-CENTEL,CENTEL,SET50
-COM7,COM7,SET50
-CPALL,CPALL,SET50
-CPF,CPF,SET50
-CPN,CPN,SET50
-CRC,CRC,SET50
-DELTA,DELTA,SET50
-EA,EA,SET50
-EGCO,EGCO,SET50
-GLOBAL,GLOBAL,SET50
-GPSC,GPSC,SET50
-GULF,GULF,SET50
-HMPRO,HMPRO,SET50
-INTUCH,INTUCH,SET50
-ITC,ITC,SET50
-IVL,IVL,SET50
-KBANK,KBANK,SET50
-KTB,KTB,SET50
-KTC,KTC,SET50
-MINT,MINT,SET50
-MTC,MTC,SET50
-OR,OR,SET50
-OSP,OSP,SET50
-PTT,PTT,SET50
-PTTEP,PTTEP,SET50
-PTTGC,PTTGC,SET50
-RATCH,RATCH,SET50
-SAWAD,SAWAD,SET50
-SCB,SCB,SET50
-SCC,SCC,SET50
-SCGP,SCGP,SET50
-TIDLOR,TIDLOR,SET50
-TISCO,TISCO,SET50
-TOP,TOP,SET50
-TRUE,TRUE,SET50
-TTB,TTB,SET50
-WHA,WHA,SET50
+﻿ticker,name,index,symbol,company_name,sector_group,industry
+ADVANC,ADVANC,SET50,ADVANC,Advanced Info Service,Technology,Information & Communication Technology
+AOT,AOT,SET50,AOT,Airports of Thailand,Services,Transportation & Logistics
+AWC,AWC,SET50,AWC,Asset World Corp,Property & Construction,Property Development
+BANPU,BANPU,SET50,BANPU,Banpu,Resources,Energy & Utilities
+BBL,BBL,SET50,BBL,Bangkok Bank,Financials,Banking
+BCP,BCP,SET50,BCP,Bangchak Corporation,Resources,Energy & Utilities
+BDMS,BDMS,SET50,BDMS,Bangkok Dusit Medical Svcs,Services,Health Care Services
+BEM,BEM,SET50,BEM,Bangkok Expressway & Metro,Services,Transportation & Logistics
+BH,BH,SET50,BH,Bumrungrad Hospital,Services,Health Care Services
+BJC,BJC,SET50,BJC,Berli Jucker,Services,Commerce
+CCET,CCET,SET50,CCET,Cal-Comp Electronics,Technology,Electronic Components
+COM7,COM7,SET50,COM7,COM7,Services,Commerce
+CPALL,CPALL,SET50,CPALL,CP All,Services,Commerce
+CPF,CPF,SET50,CPF,Charoen Pokphand Foods,Agro & Food Industry,Food & Beverage
+CPN,CPN,SET50,CPN,Central Pattana,Property & Construction,Property Development
+CRC,CRC,SET50,CRC,Central Retail Corporation,Services,Commerce
+DELTA,DELTA,SET50,DELTA,Delta Electronics (Thailand),Technology,Electronic Components
+EGCO,EGCO,SET50,EGCO,Electricity Generating,Resources,Energy & Utilities
+GPSC,GPSC,SET50,GPSC,Global Power Synergy,Resources,Energy & Utilities
+GULF,GULF,SET50,GULF,Gulf Energy Development,Resources,Energy & Utilities
+HMPRO,HMPRO,SET50,HMPRO,Home Product Center,Services,Commerce
+IVL,IVL,SET50,IVL,Indorama Ventures,Industrials,Petrochemicals & Chemicals
+KBANK,KBANK,SET50,KBANK,Kasikornbank,Financials,Banking
+KKP,KKP,SET50,KKP,Kiatnakin Phatra Bank,Financials,Banking
+KTB,KTB,SET50,KTB,Krung Thai Bank,Financials,Banking
+KTC,KTC,SET50,KTC,Krungthai Card,Financials,Finance & Securities
+LH,LH,SET50,LH,Land and Houses,Property & Construction,Property Development
+MINT,MINT,SET50,MINT,Minor International,Services,Tourism & Leisure
+MRDIYT,MRDIYT,SET50,MRDIYT,MR. D.I.Y. Holding (Thailand),Services,Commerce
+MTC,MTC,SET50,MTC,Muangthai Capital,Financials,Finance & Securities
+OR,OR,SET50,OR,PTT Oil and Retail Business,Resources,Energy & Utilities
+OSP,OSP,SET50,OSP,Osotspa,Agro & Food Industry,Food & Beverage
+PTT,PTT,SET50,PTT,PTT,Resources,Energy & Utilities
+PTTEP,PTTEP,SET50,PTTEP,PTT Exploration and Production,Resources,Energy & Utilities
+PTTGC,PTTGC,SET50,PTTGC,PTT Global Chemical,Industrials,Petrochemicals & Chemicals
+RATCH,RATCH,SET50,RATCH,Ratch Group,Resources,Energy & Utilities
+SCB,SCB,SET50,SCB,SCB X,Financials,Banking
+SCC,SCC,SET50,SCC,Siam Cement,Property & Construction,Construction Materials
+SCGP,SCGP,SET50,SCGP,SCG Packaging,Industrials,Packaging
+TCAP,TCAP,SET50,TCAP,Thanachart Capital,Financials,Banking
+TFG,TFG,SET50,TFG,Thaifoods Group,Agro & Food Industry,Food & Beverage
+THAI,THAI,SET50,THAI,Thai Airways International,Services,Transportation & Logistics
+TIDLOR,TIDLOR,SET50,TIDLOR,Ngern Tid Lor,Financials,Finance & Securities
+TISCO,TISCO,SET50,TISCO,Tisco Financial Group,Financials,Banking
+TLI,TLI,SET50,TLI,Thai Life Insurance,Financials,Insurance
+TOP,TOP,SET50,TOP,Thai Oil,Resources,Energy & Utilities
+TRUE,TRUE,SET50,TRUE,True Corporation,Technology,Information & Communication Technology
+TTB,TTB,SET50,TTB,TMBThanachart Bank,Financials,Banking
+TU,TU,SET50,TU,Thai Union Group,Agro & Food Industry,Food & Beverage
+WHA,WHA,SET50,WHA,WHA Corporation,Property & Construction,Property Development
